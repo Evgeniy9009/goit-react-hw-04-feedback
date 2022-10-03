@@ -2,9 +2,9 @@ import PropTypes from "prop-types"
 import css from "components/FeedbackOptions/FeedbackOptions.module.css"
 
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-    console.log(options)
-    const elements = options.map((name) => {
+const FeedbackOptions = ({ nameOptions, onLeaveFeedback }) => {
+    console.log(nameOptions)
+    const elements = nameOptions.map((name) => {
 
         function capitalizeFirstLetter(string) {
             return string.charAt(0).toUpperCase() + string.slice(1);
@@ -23,6 +23,6 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 export default FeedbackOptions
 
 FeedbackOptions.propTypes = {
-    options: PropTypes.arrayOf(PropTypes.string.isRequired),
+    // options: PropTypes.arrayOf(PropTypes.string.isRequired),
     onLeaveFeedback: PropTypes.func.isRequired
 }
